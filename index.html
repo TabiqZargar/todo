@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Main card container -->
+  <div class="container">
+
+    <!-- Header: title + remaining task count -->
+    <header>
+      <h1>Tasks</h1>
+      <span id="task-count">0 items left</span>
+    </header>
+
+    <!-- Input area: text field + add button -->
+    <div class="input-section">
+      <input type="text" id="todo-input" placeholder="What needs to be done?" autofocus>
+      <button id="add-btn">Add</button>
+    </div>
+
+    <!-- Filter bar: all / active / completed -->
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="active">Active</button>
+      <button class="filter-btn" data-filter="completed">Completed</button>
+    </div>
+
+    <!-- Dynamic task list -->
+    <ul id="todo-list">
+      <li class="empty-state">No tasks yet. Add one above!</li>
+    </ul>
+
+    <!-- Footer: clear completed button -->
+    <footer>
+      <button id="clear-completed">Clear completed</button>
+    </footer>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
