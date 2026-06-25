@@ -8,7 +8,8 @@ RT.Features.Dashboard = {
     RT.Helpers.setText('dash-productivity', RT.AnalyticsService.getCompletionRate() + '%');
     RT.Helpers.setText('dash-streak', RT.AnalyticsService.getStreak());
     RT.Helpers.setText('dash-focus-time', RT.FocusService.getTodayMinutes() + 'm');
-    RT.Helpers.setText('dashboard-greeting', RT.Helpers.getGreeting() + ', developer.');
+    RT.Helpers.setText('dash-sessions-today', RT.FocusService.getSessionsToday().length);
+    RT.Helpers.setText('dashboard-greeting', RT.Helpers.getGreeting() + ', Engineer.');
 
     const deadlines = RT.AnalyticsService.getUpcomingDeadlines(5);
     const container = document.getElementById('dash-deadlines');
@@ -18,6 +19,6 @@ RT.Features.Dashboard = {
       container.innerHTML = deadlines.map(t => RT.UI.deadlineItem(t)).join('');
     }
 
-    RT.UI.heatmap('heatmap-canvas', 26, 460);
+    RT.UI.heatmapGrid('heatmap-grid');
   },
 };
