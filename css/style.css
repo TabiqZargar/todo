@@ -24,8 +24,6 @@
 .kanban-card.dragging { opacity: 0.5; }
 .kanban-column.drag-over { background: rgba(200, 198, 200, 0.03); }
 
-.chart-glow { filter: drop-shadow(0 0 8px rgba(200, 198, 200, 0.3)); }
-.neon-line { filter: drop-shadow(0 0 4px currentColor); }
 .active-glow { box-shadow: 0 0 15px -3px rgba(200, 198, 200, 0.1); }
 .heatmap-cell { aspect-ratio: 1/1; border-radius: 1px; }
 .cmd-palette-blur { backdrop-filter: blur(12px); background-color: rgba(9, 9, 11, 0.85); }
